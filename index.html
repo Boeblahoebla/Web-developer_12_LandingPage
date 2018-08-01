@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Complete Bootstrap 4 Website Layout</title>
+    <link rel="stylesheet" href="https://openlayers.org/en/v5.1.3/css/ol.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/DTP100x100.png" height="60" width="60" class="d-inline-block align-self-center" alt=""> Ditigaal Talent Punt Gent
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Wat <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Het Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Partners</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Info</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content div -->
+    <div class="container-fluid">
+        <!--- Welcome Section: Jumbotron
+
+        After a click on the jumbotron button,
+        The Jumbotron switches between the one with id "jumboTronStart" and "jumboTronMap" -->
+
+        <!--- Start JumboTron (starts when page loads, hides after button click) -->
+        <div class="jumbotron align-self-auto text-center" id="jumboTronStart">
+            <h1 class="display-4">Digitaal Talent Punt Gent</h1>
+            <p class="lead">In onze Digitale Talent Punten kunt u terecht met al uw vragen omtrent computers en mobile devices.</p>
+            <hr class="my-4">
+            <p>Een team van beheerders staat elke werkdag klaar om u bij te staan tijdens uw ontdekingsreis op de digitale snelweg.</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" id="btnJumboOntdek" href="#" role="button">Ontdek!</a>
+            </p>
+        </div>
+
+        <!--- Map JumboTron (hidden at first, becomes active after button click) -->
+        <div class="jumbotron align-self-auto text-center" id="jumboTronMap">
+            <h1 class="display-4">Digitaal Talent Punt Gent</h1>
+            <p class="lead">In onze Digitale Talent Punten kunt u terecht met al uw vragen omtrent computers en mobile devices.</p>
+            <hr class="my-4">
+            <p>Een team van beheerders staat elke werkdag klaar om u bij te staan tijdens uw ontdekingsreis op de digitale snelweg.</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" id="btnJumboSluit" href="#" role="button">Sluit map</a>
+            </p>
+            <div id="map" class="map"></div>
+        </div>
+
+        <!--- Image Slider -->
+        <div id="carouselExampleIndicators" class="carousel slide paddingMarginCarousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-50" src="img/carousel_content_2.png" alt="Second slide">
+                </div>
+                <div class=" carousel-item ">
+                    <img class="d-block w-50" src="img/carousel_content_3.png" alt="Third slide ">
+                </div>
+            </div>
+        </div>
+
+        <!--- Meet the team header-->
+        <div class="col-12 text-center paddingMarginTeamheader">
+            <h1 class="display-4">Ontmoet het team</h1>
+            <hr class="my-4">
+            <p class="lead">Verken de individuele kwaliteiten van ons volledig team en waar u terecht kan.</p>
+        </div>
+
+        <!--- Fixed background DTP -->
+        <div class="backgroundFixed"></div>
+
+        <!--- Team Cards -->
+        <div class="container-fluid paddingMarginTeamcards">
+            <!-- Row 1 -->
+            <div class="row justify-content-center">
+                <div class="col-sm-6 col-md-4 col-lg-3 text-center">
+                    <!-- Card jimmy -->
+                    <div class="card paddingMarginCard justify-content-center">
+                        <img class="card-img-top " src="img/card_jimmy.png " alt="Card Jimmy ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">Jimmy Vangestel</h5>
+                            <p class="card-text ">Als all-round multimediakenner is Jimmy de persoon bij uitstek bij vragen omtrent multimedia en mobile devices.</p>
+                            <a href="# " class="btn btn-primary ">Bekijk profiel</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Denisa -->
+                <div class="col-sm-6 col-md-4 col-lg-3 text-center ">
+                    <div class="card paddingMarginCard">
+                        <img class="card-img-top " src="img/card_denisa.png " alt="Card Denisa ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">Denisa Tomasova</h5>
+                            <p class="card-text ">Bij vragen betreffende tekstverwerking, surfen, email-gebruik en de bibliotheek is Denisa uw aanspreekpunt.</p>
+                            <a href="# " class="btn btn-primary ">Bekijk profiel</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Johan -->
+                <div class="col-sm-6 col-md-4 col-lg-3 text-center ">
+                    <div class="card paddingMarginCard">
+                        <img class="card-img-top " src="https://picsum.photos/200/150/?random " alt="Card Johan ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">Johan Marien</h5>
+                            <p class="card-text ">Vragen over all-round computergebruik, networking, mobile devices en troubleshooting zijn bij Johan snel beantwoord.</p>
+                            <a href="# " class="btn btn-primary ">Bekijk profiel</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Mikail -->
+                <div class="col-sm-6 col-md-4 col-lg-3 text-center ">
+                    <div class="card paddingMarginCard">
+                        <img class="card-img-top " src="img/card_mikail.png " alt="Card Mikail ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">Mikail Alçi</h5>
+                            <p class="card-text ">Omtrent hardware, computergebruik, multimediatoepassingen en mobile devices is Mikail een uitstekend aanspreekpunt</p>
+                            <a href="# " class="btn btn-primary ">Bekijk profiel</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Obaidullah -->
+                <div class="col-sm-6 col-md-4 col-lg-3 text-center ">
+                    <div class="card paddingMarginCard">
+                        <img class="card-img-top " src="img/card_obaidullah.png " alt="Card Obaidullah ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">Obaidullah Safi</h5>
+                            <p class="card-text ">Met zijn brede kennis van all-round computergebruik en toepassingen staat Obaidullah voor u klaar met een antwoord.</p>
+                            <a href="# " class="btn btn-primary ">Bekijk profiel</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Koen -->
+                <div class="col-sm-6 col-md-4 col-lg-3 text-center ">
+                    <div class="card paddingMarginCard">
+                        <img class="card-img-top " src="https://picsum.photos/200/150/?random " alt="Card Koen ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">Koen Poté </h5>
+                            <p class="card-text ">Wenst u meer informatie omtrent computergebruik en digitale technologiën is Koen een uitmuntend contactpersoon.</p>
+                            <a href="# " class="btn btn-primary ">Bekijk profiel</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Dzengiz -->
+                <div class="col-sm-6 col-md-4 col-lg-3 text-center ">
+                    <div class="card paddingMarginCard">
+                        <img class="card-img-top " src="img/card_dzengiz.png " alt="Card Dzengiz ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">Dzengiz Tafa</h5>
+                            <p class="card-text ">Vragen over computergebruik, mobile devices en ontwikkeling worden door Dzengiz gemakkelijk verhelderd.</p>
+                            <a href="# " class="btn btn-primary ">Bekijk profiel</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Michel -->
+                <div class="col-sm-6 col-md-4 col-lg-3 text-center ">
+                    <div class="card paddingMarginCard">
+                        <img class="card-img-top " src="https://picsum.photos/200/150/?random " alt="Card Michel ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">Michel Malin</h5>
+                            <p class="card-text ">Wenst u meer te weten over multimedia-software, computergebruik en tekstverwerking is Michel een erg valabele optie.</p>
+                            <a href="# " class="btn btn-primary ">Bekijk profiel</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Kadrie -->
+                <div class="col-sm-6 col-md-4 col-lg-3 text-center ">
+                    <div class="card paddingMarginCard">
+                        <img class="card-img-top " src="img/card_kadrie.png " alt="Card Obaidullah ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">Kadrie Sadulova</h5>
+                            <p class="card-text ">Informatie betreffende all-round computergebruik, surfen en tekstverwerking wordt bij Kadrie gemakkelijk ingewonnen</p>
+                            <a href="# " class="btn btn-primary ">Bekijk profiel</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Mariette -->
+                <div class="col-sm-6 col-md-4 col-lg-3 text-center ">
+                    <div class="card paddingMarginCard">
+                        <img class="card-img-top " src="https://picsum.photos/200/150/?random " alt="Card Koen ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">Mariette Vermeulen</h5>
+                            <p class="card-text ">Voor all-round computergebruik, internet en CAW-activiteiten kunt u terecht bij Mariette die antwoorden biedt.</p>
+                            <a href="# " class="btn btn-primary ">Bekijk profiel</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Nathalie -->
+                <div class="col-sm-6 col-md-4 col-lg-3 text-center ">
+                    <div class="card paddingMarginCard">
+                        <img class="card-img-top " src="img/card_nathalie.png " alt="Card Dzengiz ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">Nathalie Legrande</h5>
+                            <p class="card-text ">Bij Nathalie kunt u altijd terecht voor vragen omtrent computergebruik, tekstverwerking en internetgebruik.</p>
+                            <a href="# " class="btn btn-primary ">Bekijk profiel</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Niels -->
+                <div class="col-sm-6 col-md-4 col-lg-3 text-center ">
+                    <div class="card paddingMarginCard">
+                        <img class="card-img-top " src="https://picsum.photos/200/150/?random " alt="Card Michel ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">Niels Van Vaerenbergh</h5>
+                            <p class="card-text ">Niels beantwoordt graag al uw vragen over all-round computergebruik, web-toepassingen en softwaregebruik.</p>
+                            <a href="# " class="btn btn-primary ">Bekijk profiel</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Solaiman -->
+                <div class="col-sm-6 col-md-4 col-lg-3 text-center ">
+                    <div class="card paddingMarginCard">
+                        <img class="card-img-top " src="img/card_solaiman.png" alt="Card Obaidullah ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">Solaiman Bahaduri</h5>
+                            <p class="card-text ">Inlichtingen over computergebruik en activiteiten rond CAW en inburgering vindt u bij Solaiman.</p>
+                            <a href="# " class="btn btn-primary ">Bekijk profiel</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Patrick -->
+                <div class="col-sm-6 col-md-4 col-lg-3 text-center ">
+                    <div class="card paddingMarginCard">
+                        <img class="card-img-top " src="https://picsum.photos/200/150/?random " alt="Card Koen ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">Patrick Moesick</h5>
+                            <p class="card-text ">De man die alle activiteiten en medewerkers in goede banen leidt is Patrick. Bij hem u terecht voor algemene DTP vragen.</p>
+                            <a href="# " class="btn btn-primary ">Bekijk profiel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--- Partner Section header -->
+    <div class="col-12 text-center ">
+        <h1 class="display-4 ">Onze partners</h1>
+        <hr class="my-4 ">
+        <p class="lead ">Het Digitaal Talent Punt wordt mogelijk gemaakt door de volgende partners</p>
+    </div>
+
+    <!--- Partner Section: Three Column Grid -->
+    <div class="container-fluid paddingMarginPartners ">
+        <!-- Create a row first -->
+        <div class="row text-center align-items-start ">
+            <!-- Add a column and its contents-->
+            <div class="col-xs-12 col-sm-6 col-md-4 paddingMarginPartner " onClick="location.href='http://www.digipolis.be' ; " style="cursor:pointer; padding:35px; ">
+                <img src="img/digipolis.png " width="180 " height="124 ">
+                <p>Innovatieve en kostenefficiënte ICT-oplossingen voor de stad Gent. </p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 paddingMarginPartner " onClick="location.href='http://www.gent.be' ; " style="cursor:pointer; padding:35px; ">
+                <img src="img/stad gent.png " width="180 " height="124 ">
+                <p>De hoofdstad van de provincie Oost-Vlaanderen. Zoveel meer dan een stad!</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 paddingMarginPartner " onClick="location.href='http://www.vzwateljee.be' ; " style="cursor:pointer; padding:35px; ">
+                <img src="img/ateljee.png " width="180 " height="124 ">
+                <p>Een toonaangevend maatwerkbedrijf in Vlaanderen met een brede waaier aan tewerkstellingsprojecten.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--- Footer -->
+    <div class="container-fluid padding footer ">
+        <!-- row containing the footer columns -->
+        <div class="row text-center padding align-items-start ">
+            <!-- column containing contact information -->
+            <div class="col-xs-12 col-sm-6 col-md-4 " id="footerContact ">
+                <hr class="my-2 footer ">
+                <i class="far fa-handshake fa-2x "></i>
+                <hr class="my-2 footer ">
+
+                <p id="footerContactEmail ">
+                    <i class="far fa-envelope "></i> info@ateljeevzw.be
+                </p>
+
+                <p id="footerContactEmail ">
+                    <i class="fas fa-phone "></i> 0490 44 65 42
+                </p>
+
+                <p id="footerContactAdress ">
+                    <i class="fas fa-home "></i> Vlaamse Kaai 10
+                </p>
+
+                <p id="footerContactLocation ">
+                    <i class="fas fa-map-marker-alt "></i> 9000 Gent
+                </p>
+            </div>
+
+            <!-- column containing office hours -->
+            <div class="col-xs-12 col-sm-6 col-md-4 " id="footerContact ">
+                <hr class="my-2 footer ">
+                <i class="far fa-clock fa-2x "></i>
+                <hr class="my-2 footer ">
+
+                <p class="footerHours ">
+                    Ma - Vrij, 09:00u - 12:00u
+                </p>
+                <p class="footerHours ">
+                    Ma - Vrij, 13:00u - 17:00u
+                </p>
+                <p class="footerHours ">
+                    Weekends: gesloten
+                </p id>
+            </div>
+
+            <!-- Column containing DTP locations -->
+            <div class="col-xs-12 col-sm-6 col-md-4 " id="footerContact ">
+                <hr class="my-2 footer ">
+                <i class="fas fa-location-arrow fa-2x "></i>
+                <hr class="my-2 footer ">
+
+                <p class="footerLocation ">
+                    Vlaamse Kaai 10, 9000 Gent
+                </p>
+                <p class="footerLocation ">
+                    Pijndersstraat 52, 9000 Gent
+                </p>
+                <p class="footerLocation ">
+                    Haspelstraat 49, 9000 Gent
+                </p>
+                </p class="footerLocation ">
+                Kongostraat 42, 9000 Gent
+                </p>
+                <p class="footerLocation ">
+                    Pannestraat 1, 9000 Gent
+                </p id>
+                <p class="footerLocation ">
+                    Oude Houtlei 124, 9000 Gent
+                </p id>
+            </div>
+        </div>
+
+        <!--- Copyright footer -->
+        <div class="text-center ">
+            <hr class="light footer ">
+            <h5>&copy; Dzengiz Tafa</h5>
+            <p>Course project - Full stack web developer: HTML5, CSS, Bootstrap</p>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="events.js"></script>
+    <script type="text/javascript" src="map.js" defer></script>
+</body>
+
+</html>
